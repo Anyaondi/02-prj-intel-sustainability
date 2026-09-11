@@ -1,7 +1,6 @@
-/* Add your CSS here */
-/* =========================
-   GLOBAL STYLES
-========================= */
+/* =========================================
+   RESET / GLOBAL
+========================================= */
 
 * {
   margin: 0;
@@ -15,145 +14,261 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+
   color: #07162f;
+
   background: #ffffff;
+
   line-height: 1.6;
 }
 
 a {
   text-decoration: none;
+
   color: inherit;
 }
 
 
-/* =========================
+/* =========================================
    NAVIGATION
-========================= */
+========================================= */
 
 .navbar {
+
   height: 82px;
+
   width: 100%;
+
   background: #ffffff;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding: 0 6.5%;
 
   position: sticky;
+
   top: 0;
+
   z-index: 1000;
 
   border-bottom: 1px solid #eeeeee;
 }
 
+
 .nav-left {
+
   display: flex;
+
   align-items: center;
+
   gap: 34px;
 }
 
-.intel-logo {
-  width: 58px;
-  height: auto;
+
+.logo-link {
+
+  display: flex;
+
+  align-items: center;
+
   margin-right: 28px;
 }
 
-.nav-left a {
+
+.intel-logo {
+
+  width: 58px;
+
+  height: auto;
+
+  display: block;
+}
+
+
+.nav-left a:not(.logo-link) {
+
   font-size: 15px;
+
   font-weight: 600;
+
   color: #07162f;
+
   transition: color 0.2s ease;
 }
 
-.nav-left a:hover {
+
+.nav-left a:not(.logo-link):hover {
+
   color: #0068d9;
 }
 
+
 .nav-right {
+
   display: flex;
+
   align-items: center;
+
   gap: 25px;
 }
 
+
 .nav-icon {
+
   font-size: 24px;
+
   color: #07162f;
 }
 
+
 .ask-intel {
+
   font-weight: 600;
+
   font-size: 15px;
 }
 
 
-/* =========================
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .hero {
-  min-height: 420px;
+
+  min-height: 430px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   text-align: center;
 
   background: #ffffff;
 
-  padding: 80px 20px 60px;
+  padding: 70px 20px 55px;
 }
+
 
 .hero-content {
-  max-width: 1050px;
+
+  max-width: 1100px;
 }
 
+
 .hero h1 {
-  font-size: clamp(48px, 6vw, 78px);
-  line-height: 1.03;
+
+  font-size: clamp(48px, 6vw, 76px);
+
+  line-height: 1.05;
+
   letter-spacing: -3px;
+
   font-weight: 700;
+
   margin-bottom: 28px;
 }
 
-.hero p {
-  max-width: 760px;
-  margin: auto;
 
-  font-size: 19px;
+.hero p {
+
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  font-size: 18px;
+
   line-height: 1.7;
+
   color: #42526a;
 }
 
-.intel-inside {
-  margin-top: 35px;
 
-  font-size: 32px;
+.intel-inside {
+
+  margin-top: 30px;
+
+  font-size: 30px;
+
   font-weight: 700;
+
   letter-spacing: -1px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 5px;
 }
 
-.intel-inside span {
+
+.intel-inside span:not(.blue-square) {
+
   font-weight: 400;
 }
 
+
 .intel-inside sup {
-  font-size: 13px;
+
+  font-size: 12px;
+
+  align-self: flex-start;
+
+  margin-top: 5px;
 }
 
 
-/* =========================
-   QUICK LINK CARDS
-========================= */
+.blue-square {
+
+  display: inline-block;
+
+  width: 13px;
+
+  height: 13px;
+
+  background: #00aeef;
+
+  margin-left: 5px;
+
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   FOUR FEATURE CARDS
+========================================= */
+
+.quick-links {
+
+  width: 88%;
+
+  max-width: 1450px;
+
+  margin: 25px auto 100px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+
 
 .quick-card {
-  min-height: 420px;
+
+  min-height: 430px;
 
   background: #eef4fc;
 
   display: flex;
+
   flex-direction: column;
 
   overflow: hidden;
@@ -163,17 +278,21 @@ a {
     box-shadow 0.25s ease;
 }
 
+
 .quick-card:hover {
+
   transform: translateY(-7px);
 
   box-shadow: 0 15px 35px rgba(0, 30, 70, 0.15);
 }
 
 
-/* Images */
+/* Card images */
 
 .card-image {
+
   width: 100%;
+
   height: 190px;
 
   object-fit: cover;
@@ -183,95 +302,159 @@ a {
   transition: transform 0.4s ease;
 }
 
+
 .quick-card:hover .card-image {
+
   transform: scale(1.05);
 }
 
 
-/* Card text */
+/* Card content */
 
 .card-content {
-  padding: 28px;
+
+  padding: 25px 30px 30px;
 
   display: flex;
+
   flex-direction: column;
 
   flex: 1;
 }
 
-.quick-card h3 {
-  font-size: 23px;
-  margin-bottom: 10px;
-}
 
-.quick-card p {
-  color: #526174;
-  font-size: 15px;
+.card-icon {
+
+  color: #0059d6;
+
+  font-size: 30px;
+
+  font-weight: bold;
 
   margin-bottom: 20px;
 }
 
+
+.quick-card h3 {
+
+  font-size: 23px;
+
+  line-height: 1.2;
+
+  margin-bottom: 10px;
+}
+
+
+.quick-card p {
+
+  color: #526174;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  margin-bottom: 20px;
+}
+
+
 .quick-card a {
+
   color: #0059d6;
+
   font-weight: 700;
 
   margin-top: auto;
 }
 
-/* =========================
+
+.quick-card a:hover {
+
+  text-decoration: underline;
+}
+
+
+/* =========================================
    TIMELINE SECTION
-========================= */
+========================================= */
 
 main {
+
   background: #f7f9fc;
+
   padding: 100px 7%;
 }
 
+
 .section-heading {
+
   max-width: 850px;
+
   margin: 0 auto 70px;
+
   text-align: center;
 }
 
+
 .eyebrow {
+
   color: #0068d9;
+
   font-size: 14px;
+
   font-weight: 700;
+
   letter-spacing: 2px;
+
   margin-bottom: 12px;
 }
 
+
 .section-heading h2 {
+
   font-size: clamp(38px, 5vw, 58px);
+
   line-height: 1.1;
+
   letter-spacing: -2px;
+
   margin-bottom: 20px;
 }
 
+
 .section-heading > p:last-child {
+
   color: #5a687b;
+
   font-size: 17px;
 }
 
 
-/* =========================
+/* =========================================
    TIMELINE
-========================= */
+========================================= */
 
 .timeline {
+
   max-width: 1050px;
+
   margin: auto;
 
   position: relative;
 }
 
+
+/* Vertical timeline line */
+
 .timeline::before {
+
   content: "";
 
   position: absolute;
 
   left: 50%;
+
   top: 0;
+
   bottom: 0;
 
   width: 3px;
@@ -281,7 +464,11 @@ main {
   transform: translateX(-50%);
 }
 
+
+/* Timeline cards */
+
 .timeline-card {
+
   width: 45%;
 
   background: #ffffff;
@@ -301,21 +488,33 @@ main {
     box-shadow 0.25s ease;
 }
 
+
 .timeline-card:hover {
+
   transform: translateY(-5px);
 
   box-shadow: 0 15px 35px rgba(0, 25, 60, 0.12);
 }
 
+
+/* Alternate sides */
+
 .timeline-card:nth-child(odd) {
+
   margin-right: auto;
 }
 
+
 .timeline-card:nth-child(even) {
+
   margin-left: auto;
 }
 
+
+/* Timeline dots */
+
 .timeline-card::after {
+
   content: "";
 
   position: absolute;
@@ -323,6 +522,7 @@ main {
   top: 38px;
 
   width: 15px;
+
   height: 15px;
 
   border-radius: 50%;
@@ -334,18 +534,27 @@ main {
   box-shadow: 0 0 0 2px #0068d9;
 }
 
+
 .timeline-card:nth-child(odd)::after {
+
   right: -63px;
 }
 
+
 .timeline-card:nth-child(even)::after {
+
   left: -63px;
 }
 
+
+/* Year */
+
 .year {
+
   color: #0068d9;
 
   font-size: 18px;
+
   font-weight: 700;
 
   letter-spacing: 1px;
@@ -353,23 +562,37 @@ main {
   margin-bottom: 7px;
 }
 
+
+/* Timeline heading */
+
 .timeline-content h3 {
+
   font-size: 27px;
+
   line-height: 1.2;
+
   margin-bottom: 15px;
 }
 
+
+/* Timeline paragraph */
+
 .timeline-content p {
+
   color: #59687b;
+
   font-size: 15px;
+
+  line-height: 1.7;
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
+
   text-align: center;
 
   padding: 35px;
@@ -382,112 +605,195 @@ footer {
 }
 
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/* =========================================
+   TABLET
+========================================= */
 
 @media (max-width: 1100px) {
 
   .navbar {
+
     padding: 0 4%;
   }
 
+
   .nav-left {
+
     gap: 18px;
   }
 
-  .intel-logo {
+
+  .logo-link {
+
     margin-right: 10px;
   }
 
+
   .quick-links {
+
     width: 92%;
   }
 
 }
 
 
+/* =========================================
+   SMALL TABLET
+========================================= */
+
 @media (max-width: 850px) {
 
   .navbar {
+
     height: auto;
+
     padding: 20px;
 
     flex-direction: column;
+
     gap: 20px;
   }
 
+
   .nav-left {
+
     flex-wrap: wrap;
+
     justify-content: center;
   }
 
+
   .nav-right {
+
     display: none;
   }
 
+
   .hero {
+
     padding-top: 70px;
   }
 
+
   .hero h1 {
+
     letter-spacing: -2px;
   }
 
+
   .quick-links {
+
     grid-template-columns: repeat(2, 1fr);
   }
 
+
+  /* Move timeline line to left */
+
   .timeline::before {
+
     left: 10px;
   }
+
 
   .timeline-card,
   .timeline-card:nth-child(odd),
   .timeline-card:nth-child(even) {
+
     width: calc(100% - 40px);
+
     margin-left: 40px;
+
     margin-right: 0;
   }
+
 
   .timeline-card::after,
   .timeline-card:nth-child(odd)::after,
   .timeline-card:nth-child(even)::after {
+
     left: -39px;
+
     right: auto;
   }
 
 }
 
 
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 550px) {
 
-  .nav-left a {
+  .nav-left a:not(.logo-link) {
+
     font-size: 13px;
   }
 
+
   .hero {
+
     min-height: 400px;
+
+    padding: 60px 20px;
   }
+
 
   .hero h1 {
+
     font-size: 44px;
+
+    letter-spacing: -2px;
   }
 
+
   .hero p {
+
     font-size: 16px;
   }
 
-  .quick-links {
-    grid-template-columns: 1fr;
+
+  .intel-inside {
+
+    font-size: 25px;
   }
+
+
+  .quick-links {
+
+    grid-template-columns: 1fr;
+
+    width: 90%;
+  }
+
 
   .quick-card {
-    min-height: 250px;
+
+    min-height: 400px;
   }
 
+
   main {
+
     padding: 70px 5%;
+  }
+
+
+  .section-heading h2 {
+
+    font-size: 40px;
+  }
+
+
+  .timeline-card {
+
+    padding: 25px;
+  }
+
+
+  .timeline-content h3 {
+
+    font-size: 23px;
   }
 
 }
